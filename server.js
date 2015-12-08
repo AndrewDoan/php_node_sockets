@@ -14,7 +14,8 @@ var server = app.listen(app.get('port'), function() {
 var io=require("socket.io").listen(server);
 io.sockets.on("connection", function(socket){
   socket.on("test", function(data){
-    setInterval(function(){ randomMessages(); }, 5000);
+    // setInterval(function(){ randomMessages(); }, 5000);
+    randomMessages();
   })
 });
 
